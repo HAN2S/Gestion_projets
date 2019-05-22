@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context=".Projets">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <ListView
+        android:layout_width="368dp"
+        android:layout_height="501dp"
+        android:id="@+id/list_projets"
+        tools:layout_editor_absoluteX="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintBottom_toBottomOf="@id/list_projets"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left">
+
+        <Button
+            android:id="@+id/btn_ajouter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/ajouter"
+            android:textAllCaps="false"
+            android:textColor="@color/login_form_details_medium"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+        <Button
+            android:id="@+id/btn_modifier"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/modifier"
+            android:textAllCaps="false"
+            android:textColor="@color/login_form_details_medium"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintLeft_toRightOf="@id/btn_ajouter"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+        <Button
+            android:id="@+id/btn_supprimer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/supprimer"
+            android:textAllCaps="false"
+            android:textColor="@color/login_form_details_medium"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintLeft_toRightOf="@id/btn_modifier"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
