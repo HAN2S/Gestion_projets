@@ -19,11 +19,12 @@ public class Ajout extends AppCompatActivity {
         ajouter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name=findViewById(R.id.Titre);
                 String nom = name.getText().toString();
                 Projet projet = new Projet(nom);
                 DBProjet db = new DBProjet(Ajout.this);
-                db.AjoutContact(projet);
-                Toast.makeText(Ajout.this, "saved !", Toast.LENGTH_SHORT).show();
+                db.AjoutProjet(projet);
+                Toast.makeText(Ajout.this, "saved !"+projet.getNom(), Toast.LENGTH_SHORT).show();
                 Intent projIntent = new Intent(Ajout.this,Projets.class);
                 startActivity(projIntent);
             }

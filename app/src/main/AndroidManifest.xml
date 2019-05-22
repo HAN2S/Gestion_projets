@@ -17,10 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register_activity" />
-        <activity android:name=".Projets" >
-
-        </activity>
-        <activity android:name=".Ajout"></activity>
+        <activity android:name=".Projets"></activity>
+        <activity android:name=".Ajout" />
+        <activity android:name=".Modification"></activity>
     </application>
 
 </manifest>

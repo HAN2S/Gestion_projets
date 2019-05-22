@@ -38,7 +38,7 @@ public class DBProjet extends SQLiteOpenHelper{
 
     }
 
-    public void AjoutContact(Projet projet)
+    public void AjoutProjet(Projet projet)
     {
         SQLiteDatabase db =getWritableDatabase();
 
@@ -48,9 +48,9 @@ public class DBProjet extends SQLiteOpenHelper{
     }
 
 
-    public ArrayList<Projet> getAllContact()
+    public ArrayList<Projet> getAllProjet()
     {
-        ArrayList<Projet> contacts = new ArrayList<>();
+        ArrayList<Projet> projets = new ArrayList<>();
 
         String query=" SELECT * FROM "+TB_NAME+";";
 
@@ -60,16 +60,16 @@ public class DBProjet extends SQLiteOpenHelper{
         {
             do {
 
-                int id = cursor.getInt(cursor.getColumnIndex("id"));
+             //  int id = cursor.getInt(cursor.getColumnIndex("id"));
                 String name = cursor.getString(cursor.getColumnIndex("name"));
-                Projet projet = new Projet(id,name);
+                Projet projet = new Projet(name);
 
-                contacts.add(projet);
+                projets.add(projet);
 
             }while (cursor.moveToNext());
         }
 
-        return contacts;
+        return projets;
     }
 
 
@@ -104,7 +104,7 @@ public class DBProjet extends SQLiteOpenHelper{
         return projet;
     }
 
-    public void DeleteContact(int id)
+    public void DeleteProjet(int id)
     {
         SQLiteDatabase db = this.getWritableDatabase();
 
