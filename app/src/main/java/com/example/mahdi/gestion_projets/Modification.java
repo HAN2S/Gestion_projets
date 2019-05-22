@@ -26,8 +26,8 @@ public class Modification extends AppCompatActivity {
         nom=findViewById(R.id.Titre);
        // String name=db.getProjetById(id).getNom();
         //nom.setText(name);
-        id1=findViewById(R.id.id);
-        id1.setText(id);
+       // id1=findViewById(R.id.id);
+       // id1.setText(id);
 
         modifier=findViewById(R.id.modifier_projet);
         modifier.setOnClickListener(new View.OnClickListener() {
